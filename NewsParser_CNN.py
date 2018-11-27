@@ -131,12 +131,14 @@ class NewsParser_CNN(NewsParser):
 
     def exec_articles(self):
         """Loops through all the saved article urls and calls 'get_article_data' method to retrieve paragraph content for each url."""
+        print("Extracting articles content...")
         for i in range(0, len(self.article_urls)):
             url = self.article_urls[i]
             filename = self.article_filenames[i]
             self.get_article_data(url, filename) #method call
         self.article_urls = [] #reset vars.
         self.article_filenames=[]
+        print("Success...\n")
 
     def execute(self):
         """Main method for this class. Visits different cnn website urls by calling class methods."""

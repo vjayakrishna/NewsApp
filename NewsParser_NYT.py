@@ -78,12 +78,14 @@ class NewsParser_NYT(NewsParser):
         return
 
     def exec_articles(self):
+        print("Extracting articles content...")
         for i in range(0, len(self.article_urls)):
             url = self.article_urls[i]
             filename = self.article_filenames[i]
             self.get_article_data(url, filename)
         self.article_urls = []
         self.article_filenames=[]
+        print("Success...\n")
 
     def execute(self):
         self.parseurl("https://www.nytimes.com/section/us", "nytimes")

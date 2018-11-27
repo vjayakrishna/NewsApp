@@ -1,20 +1,20 @@
-Trump threatens to cut all GM subsidies ; cnn; https://www.cnn.com/2018/11/27/business/gm-trump-subsidies/index.html; cnn_954121.txt
-Mary Barra's mission to transform a century-old company ; cnn; https://www.cnn.com/2018/11/26/business/gm-jobs-electric-cars/index.html; cnn_954122.txt
-GM will no longer make these 6 cars; cnn; https://www.cnn.com/2018/11/26/business/gm-cars-dropping-production/index.html; cnn_954123.txt
-Former Facebook employee says the company has 'a black people problem'; cnn; https://www.cnn.com/2018/11/27/tech/facebook-mark-luckie/index.html; cnn_954124.txt
-Microsoft and Apple are fighting to be world's most valuable company; cnn; https://www.cnn.com/2018/11/27/tech/microsoft-apple-market-value/index.html; cnn_954125.txt
-Condé Nast, Its Luster Dimmed by Losses, Is Looking for a New Chief; nytimes; https://www.nytimes.com/2018/11/27/business/conde-nast-ceo-robert-sauerberg.html; nytimes_623567.txt
-Jack Ma, China’s Richest Man, Belongs to the Communist Party. Of Course.; nytimes; https://www.nytimes.com/2018/11/27/business/jack-ma-communist-party-alibaba.html; nytimes_623568.txt
-Why Trump’s Support for the Saudis May Not Help Them, or Him; nytimes; https://www.nytimes.com/2018/11/26/business/dealbook/saudi-arabia-sanctions-trump.html; nytimes_623569.txt
-G.M. to Idle Plants and Cut Thousands of Jobs as Sales Slow; nytimes; https://www.nytimes.com/2018/11/26/business/general-motors-cutbacks.html; nytimes_623570.txt
-United Technologies to Split Into 3 Companies, Each With a Sharper Focus; nytimes; https://www.nytimes.com/2018/11/26/business/united-technologies-split.html; nytimes_623571.txt
-All the things New Yorkers fear about Amazon's HQ2 (and a little optimism); nbc; https://www.nbcnews.com/tech/tech-news/despite-pushback-amazon-hq2-np-4-nyc-experts-say-n938531; nbc_261122.txt
-Trump threatens GM subsidies after layoffs; nbc; https://www.nbcnews.com/business/autos/trump-threatens-slap-gm-subsidies-after-layoff-announcement-n940726; nbc_261123.txt
-Dolce & Gabbana fiasco shows importance, risks of China market; nbc; https://www.nbcnews.com/news/asian-america/dolce-gabbana-fiasco-shows-importance-risks-china-market-n940706; nbc_261124.txt
-Kudlow says Trump is open to a 'fair' trade deal with China; nbc; https://www.nbcnews.com/business/business-news/ahead-g20-summit-kudlow-says-trump-open-fair-trade-deal-n940101; nbc_261125.txt
-Giving Tuesday: 18 unique gifts that give back; nbc; https://www.nbcnews.com/better/business/14-charitable-gifts-give-back-those-need-ncna823386; nbc_261126.txt
-The 6 vehicles GM will no longer produce; fox; https://www.foxbusiness.com/markets/these-6-gm-vehicles-are-ending-production; fox_133950.txt
-Dobbs: General Motors didn't put America first; fox; https://www.foxbusiness.com/business-leaders/general-motors-did-not-put-america-first-dobbs; fox_133951.txt
-GM's Barra met with Kudlow after GM layoffs announcement; fox; https://www.foxbusiness.com/business-leaders/gm-ceo-barra-larry-kudlow-to-meet-after-layoffs-announcement; fox_133952.txt
-Tax bill on retirement, IRS introduced by top US House tax writer; fox; https://www.foxbusiness.com/economy/top-us-house-tax-writer-floats-tax-bill-on-retirement-plans-irs; fox_133953.txt
-Facebook has a ‘black people problem,' ex-employee says; fox; https://www.foxbusiness.com/business-leaders/facebook-has-a-black-people-problem-ex-employee-says; fox_133954.txt
+Trump threatens to cut all GM subsidies ; cnn; https://www.cnn.com/2018/11/27/business/gm-trump-subsidies/index.html; cnn_189478.txt
+Mary Barra's mission to transform a century-old company ; cnn; https://www.cnn.com/2018/11/26/business/gm-jobs-electric-cars/index.html; cnn_189479.txt
+GM will no longer make these 6 cars; cnn; https://www.cnn.com/2018/11/26/business/gm-cars-dropping-production/index.html; cnn_189480.txt
+Former Facebook employee says the company has 'a black people problem'; cnn; https://www.cnn.com/2018/11/27/tech/facebook-mark-luckie/index.html; cnn_189481.txt
+Microsoft and Apple are fighting to be world's most valuable company; cnn; https://www.cnn.com/2018/11/27/tech/microsoft-apple-market-value/index.html; cnn_189482.txt
+Condé Nast, Its Luster Dimmed by Losses, Is Looking for a New Chief; nytimes; https://www.nytimes.com/2018/11/27/business/conde-nast-ceo-robert-sauerberg.html; nytimes_546194.txt
+Jack Ma, China’s Richest Man, Belongs to the Communist Party. Of Course.; nytimes; https://www.nytimes.com/2018/11/27/business/jack-ma-communist-party-alibaba.html; nytimes_546195.txt
+Why Trump’s Support for the Saudis May Not Help Them, or Him; nytimes; https://www.nytimes.com/2018/11/26/business/dealbook/saudi-arabia-sanctions-trump.html; nytimes_546196.txt
+G.M. to Idle Plants and Cut Thousands of Jobs as Sales Slow; nytimes; https://www.nytimes.com/2018/11/26/business/general-motors-cutbacks.html; nytimes_546197.txt
+United Technologies to Split Into 3 Companies, Each With a Sharper Focus; nytimes; https://www.nytimes.com/2018/11/26/business/united-technologies-split.html; nytimes_546198.txt
+All the things New Yorkers fear about Amazon's HQ2 (and a little optimism); nbc; https://www.nbcnews.com/tech/tech-news/despite-pushback-amazon-hq2-np-4-nyc-experts-say-n938531; nbc_558646.txt
+Trump threatens GM subsidies after layoffs; nbc; https://www.nbcnews.com/business/autos/trump-threatens-slap-gm-subsidies-after-layoff-announcement-n940726; nbc_558647.txt
+Dolce & Gabbana fiasco shows importance, risks of China market; nbc; https://www.nbcnews.com/news/asian-america/dolce-gabbana-fiasco-shows-importance-risks-china-market-n940706; nbc_558648.txt
+Kudlow says Trump is open to a 'fair' trade deal with China; nbc; https://www.nbcnews.com/business/business-news/ahead-g20-summit-kudlow-says-trump-open-fair-trade-deal-n940101; nbc_558649.txt
+Giving Tuesday: 18 unique gifts that give back; nbc; https://www.nbcnews.com/better/business/14-charitable-gifts-give-back-those-need-ncna823386; nbc_558650.txt
+The 6 vehicles GM will no longer produce; fox; https://www.foxbusiness.com/markets/these-6-gm-vehicles-are-ending-production; fox_151231.txt
+Dobbs: General Motors didn't put America first; fox; https://www.foxbusiness.com/business-leaders/general-motors-did-not-put-america-first-dobbs; fox_151232.txt
+GM's Barra met with Kudlow after GM layoffs announcement; fox; https://www.foxbusiness.com/business-leaders/gm-ceo-barra-larry-kudlow-to-meet-after-layoffs-announcement; fox_151233.txt
+Tax bill on retirement, IRS introduced by top US House tax writer; fox; https://www.foxbusiness.com/economy/top-us-house-tax-writer-floats-tax-bill-on-retirement-plans-irs; fox_151234.txt
+Facebook has a ‘black people problem,' ex-employee says; fox; https://www.foxbusiness.com/business-leaders/facebook-has-a-black-people-problem-ex-employee-says; fox_151235.txt
