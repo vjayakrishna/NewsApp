@@ -7,7 +7,7 @@ from Window3 import Window3
 class Window2:
     def __init__(self, root, data):
         self.counter = 0    #counter for the control of data.
-        self.location = "./NewsApp-master/files/news_articles/" #path of directory to read story from files.
+        self.location = "./files/news_articles/" #path of directory to read story from files.
         #lists to store data from files.
         self.value = self.value1 = self.value2 = self.value3 = []
 
