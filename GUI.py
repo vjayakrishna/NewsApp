@@ -8,7 +8,7 @@ class GUI:
     def __init__(self):
         self.file = ""
         self.headlines = []
-        self.location = "./NewsApp-master/files/headlines/" #path of directory to read files.
+        self.location = "./files/headlines/" #path of directory to read files.
         self.rf = Readfile()    #object of readfiles class to read data from files.
 
         #creating main window.
