@@ -3,10 +3,6 @@ import tkinter.messagebox
 from Window2 import Window2
 from Readfile import Readfile
 import crawler
-import NewsParser_CNN
-import NewsParser_NYT
-import NewsParser_NBC
-import NewsParser_FOX
 
 
 #class for implementing GUI
@@ -146,6 +142,7 @@ class GUI:
         msgbox = tkinter.messagebox.askquestion("REFRESH", "Loading app data, it may take some time.\nDo you want to continue?", icon='warning')
 
         if msgbox == 'yes':
+            #starting the crawler to update latest news data into files.
             crawler.execute()
             tkinter.messagebox.showinfo("REFRESH", "Process completed.")
 
