@@ -1,6 +1,7 @@
 import os
 import re
 
+
 #class to perform file operations.
 class Readfile:
     def __init__(self):
@@ -16,7 +17,7 @@ class Readfile:
 
     def search_item(self, words):
         #method for implementing search functionality, for search bar in the app.
-        location = "./NewsApp-master/files/headlines/"  #file path.
+        location = "./files/headlines/"  #file path.
         files = os.listdir(location)    #reading all files from path directory.
         self.search_word = []
         word = words.lower().split()    #list for search keywords.
@@ -35,8 +36,8 @@ class Readfile:
                     #searching begins.
                     for i in range(len(searching)):
                         #eliminating all the special characters.
-                        searching[i] = re.sub(r'\'s', '', searching[i])
-                        searching[i] = re.sub('[()!?,.:\']', '', searching[i])
+                        searching[i] = re.sub(r"\'s", '', searching[i])
+                        searching[i] = re.sub('[()!?,.:\'`]', '', searching[i])
                         if '-' in searching[i]:
                             temp = searching[i].split('-')
                             searching[i] = temp[0]
