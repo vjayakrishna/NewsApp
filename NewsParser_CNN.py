@@ -123,6 +123,14 @@ class NewsParser_CNN(NewsParser):
                 article_content += str(content1[0]) + "\n" #adding the paragraph to variable.
         p = re.compile('<(.*?)>') #matching any tags present in the article paragraphs content.
         article_content = p.sub("", article_content) #removing any tags present, by replacing them with empty string.
+        p = re.compile('&apos;|&#x2018;|&#x2019;')
+        article_content = p.sub("\'", article_content)
+        p = re.compile('&#xA0;')
+        article_content = p.sub(" ", article_content)
+        p = re.compile('&quot;|&#x201C;|&#x201D;')
+        article_content = p.sub("\"", article_content)
+        p = re.compile('&#x2014;')
+        article_content = p.sub("-", article_content)
         #print(article_content)
         fh = open("files/news_articles/cnn/"+filename, 'w')
         fh.write(article_content) #writing the paragraphs to the given file.

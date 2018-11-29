@@ -1,6 +1,7 @@
 from html.parser import HTMLParser
 from urllib.request import urlopen
 import random
+import re
 
 class DataParsedException(Exception):
     """Custom exception designed to stop the execution of NewsParsers.
@@ -109,6 +110,8 @@ class NewsParser(HTMLParser):
 
     def write_to_file(self, filename):
         """Writes the extracted headlines present in 'self.content' to file. """
+        # p = re.compile('&apos;|&#x2018;|&#x2019;|&#x275B;|&#x275C')
+        # self.content = p.sub("\'", self.content)
         fh = open("files/headlines/"+filename, 'a')
         fh.write(self.content)
         fh.close()
