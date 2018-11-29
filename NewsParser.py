@@ -110,8 +110,9 @@ class NewsParser(HTMLParser):
 
     def write_to_file(self, filename):
         """Writes the extracted headlines present in 'self.content' to file. """
-        # p = re.compile('&apos;|&#x2018;|&#x2019;|&#x275B;|&#x275C')
-        # self.content = p.sub("\'", self.content)
+        p = re.compile(chr(8217)+'|'+chr(10076)+'|'+chr(8216)+'|'+chr(10075))
+        self.content = p.sub("\'", self.content)
+        #self.content = self.content.replace(chr(8217), "\'").replace(chr(10076), "\'")
         fh = open("files/headlines/"+filename, 'a')
         fh.write(self.content)
         fh.close()
