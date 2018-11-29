@@ -1,7 +1,13 @@
 from tkinter import *
-from Readfile import Readfile
-from Window2 import Window2
 import tkinter.messagebox
+from Window2 import Window2
+from Readfile import Readfile
+import crawler
+import NewsParser_CNN
+import NewsParser_NYT
+import NewsParser_NBC
+import NewsParser_FOX
+
 
 #class for implementing GUI
 class GUI:
@@ -22,10 +28,10 @@ class GUI:
         self.var.set("WELCOME, TO NEWS APP")
 
         #label and button to get started.
-        self.label2 = Label(self.root1, textvariable=self.var, bg="grey", fg="white", font="Verdana 19 bold italic")
-        self.label2.place(x=450, y=300, anchor=CENTER)
+        self.label = Label(self.root1, textvariable=self.var, bg="grey", fg="white", font="Verdana 20 bold italic")
+        self.label.place(x=450, y=300, anchor=CENTER)
 
-        self.button9 = Button(self.root1, cursor="dot", bd=3, bg="grey", fg="white", font="Verdana 13 bold italic", text="Get started", relief=GROOVE, command=self.start)
+        self.button9 = Button(self.root1, bd=3, bg="grey", fg="white", font="Verdana 13 bold italic", text="Get started", relief=GROOVE, command=self.start)
         self.button9.place(x=450, y=350, anchor=CENTER)
 
         self.root1.config(bg="grey")
@@ -33,45 +39,38 @@ class GUI:
 
     def start(self):
         #adding label, entry buttons to root window.
-        label = Label(self.root1, bg="light grey", fg="grey50", font="Verdana 19 bold", text="NEWS")
-        label.place(x=0, y=0)
+        label1 = Label(self.root1, bg="light grey", fg="grey50", font="Verdana 20 bold", text="NEWS:")
+        label1.place(x=0, y=0)
+
+        button1 = Button(self.root1, bd=3, bg="grey70", font="Verdana 12 bold", text="Home", relief=GROOVE, command=self.home)
+        button1.place(x=130, y=4)
+
+        button2 = Button(self.root1, bd=3, bg="grey70", font="Verdana 12 bold", text="World", relief=GROOVE, command=self.world)
+        button2.place(x=270, y=4)
+
+        button3 = Button(self.root1, bd=3, bg="grey70", font="Verdana 12 bold", text="Business", relief=GROOVE, command=self.business)
+        button3.place(x=410, y=4)
+
+        button4 = Button(self.root1, bd=3, bg="grey70", font="Verdana 12 bold", text="Politics", relief=GROOVE, command=self.politics)
+        button4.place(x=575, y=4)
+
+        button5 = Button(self.root1, bd=3, bg="grey70", font="Verdana 12 bold", text="Entertainment", relief=GROOVE, command=self.entertainment)
+        button5.place(x=725, y=4)
+
+        button6 = Button(self.root1, cursor="watch", bd=3, bg="grey70", font="Verdana 11 italic", text="Refresh", relief=GROOVE, command=self.refresh)
+        button6.place(x=15, y=50)
 
         self.entry = Entry(self.root1, relief=GROOVE, bd=3, font="Arial 12", width=75)
-        self.entry.place(x=95, y=6)
+        self.entry.place(x=110, y=54)
 
-        button1 = Button(self.root1, cursor="dot", bd=3, bg="grey70", font="Verdana 12 bold", text="Search", relief=GROOVE, command=self.search)
-        button1.place(x=785, y=0)
+        button7 = Button(self.root1, bd=3, bg="grey70", font="Verdana 11 italic", text="Search", relief=GROOVE, command=self.search)
+        button7.place(x=805, y=50)
 
-        button2 = Button(self.root1, cursor="dot", bd=3, bg="grey70", font="Verdana 12 bold", text="Exit", relief=GROOVE, command=self.root1.destroy)
-        button2.place(x=880, y=0)
-
-        button = Button(self.root1, cursor="watch", bd=3, bg="grey70", font="Verdana 13 bold italic", text="Menu", relief=GROOVE, command=self.menu)
-        button.place(x=10, y=50)
+        button8 = Button(self.root1, bd=3, bg="grey70", fg="red", font="Verdana 11 italic", text="Exit", relief=GROOVE, command=self.root1.destroy)
+        button8.place(x=885, y=50)
 
         self.root1.config(bg="light grey")
         self.home()
-
-    def menu(self):
-        #Adding buttons to menu.
-        button3 = Button(self.root1, cursor="watch", bd=3, bg="grey70", font="Verdana 13 bold italic", text="Home", relief=GROOVE, command=self.home)
-        button3.place(x=10, y=50)
-
-        button4 = Button(self.root1, cursor="watch", bd=3, bg="grey70", font="Verdana 13 bold italic", text="World", relief=GROOVE, command=self.world)
-        button4.place(x=150, y=50)
-
-        button5 = Button(self.root1, cursor="watch", bd=3, bg="grey70", font="Verdana 13 bold italic", text="Business", relief=GROOVE, command=self.business)
-        button5.place(x=300, y=50)
-
-        button6 = Button(self.root1, cursor="watch", bd=3, bg="grey70", font="Verdana 13 bold italic", text="Politics", relief=GROOVE, command=self.politics)
-        button6.place(x=475, y=50)
-
-        button7 = Button(self.root1, cursor="watch", bd=3, bg="grey70", font="Verdana 13 bold italic", text="Entertainment", relief=GROOVE, command=self.entertainment)
-        button7.place(x=630, y=50)
-
-        button8 = Button(self.root1, cursor="watch", bd=3, bg="grey70", font="Verdana 13 bold italic", text="Refresh", relief=GROOVE, command=self.root1.destroy)
-        button8.place(x=840, y=50)
-
-        self.root1.config(bg="light grey")
 
     def home(self):
         #method to display news in home window.
@@ -130,9 +129,8 @@ class GUI:
 
         self.rf.search_item(temp)
         self.headlines = self.rf.search_get()
-        self.entry.delete(0, 'end')
 
-        #message box if search is inapropriate.
+        #message box if search is inappropriate.
         if not temp:
             tkinter.messagebox.showinfo("SEARCH", "Empty string")
         elif not self.headlines:
@@ -140,8 +138,37 @@ class GUI:
         else:
             win6 = Window2(self.root1, self.headlines)
 
+    def refresh(self):
+        #method to run the crawler again, to update latest news.
+        self.entry.delete(0, "end")
+
+        #message box to get user opinion.
+        msgbox = tkinter.messagebox.askquestion("REFRESH", "Loading app data, it may take some time.\nDo you want to continue?", icon='warning')
+
+        if msgbox == 'yes':
+            #Reset all the file data and article files before executing the program.
+            crawler.remove_existing_files()
+            crawler.clearallfiledata()
+            
+            #Init all the news parsers and execute them...
+            NP1 = NewsParser_CNN.NewsParser_CNN()
+            NP1.execute()
+
+            NP2 = NewsParser_NYT.NewsParser_NYT()
+            NP2.execute()
+
+            NP3 = NewsParser_NBC.NewsParser_NBC()
+            NP3.execute()
+
+            NP4 = NewsParser_FOX.NewsParser_FOX()
+            NP4.execute()
+
+            tkinter.messagebox.showinfo("REFRESH", "Process completed.")
+
+            #To start displaying new data from files.
+            self.home()
+
 
 if __name__ == "__main__":
     GUI()
-
 
