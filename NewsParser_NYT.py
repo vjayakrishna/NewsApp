@@ -64,10 +64,10 @@ class NewsParser_NYT(NewsParser):
         response = urlopen(url)
         htmlstring = response.read().decode('utf-8')
 
-        content1 = re.findall(r'<p class="css-1ebnwsw e2kc3sl0">(.*?)</p>', htmlstring)
+        content1 = re.findall(r'<p class="[a-z0-9 -]+">(.*?)</p>', htmlstring)
         for i in range(len(content1)):
             article_content += str(content1[i]) + "\n"
-            if i==2:
+            if i == 2:
                 break
         p = re.compile('<(.*?)>')
         article_content = p.sub("", article_content)
