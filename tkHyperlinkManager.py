@@ -40,3 +40,4 @@ class HyperlinkManager:
             if tag[:6] == "hyper-":
                 self.links[tag]()
                 return
+
