@@ -33,21 +33,22 @@ def remove_existing_files():
             os.remove(os.path.join(file_path, file))
     return
 
+def execute():
+    #Reset all the file data and article files before executing the program.
+    remove_existing_files()
+    clearallfiledata()
 
-#Reset all the file data and article files before executing the program.
-remove_existing_files()
-clearallfiledata()
+    #Init all the news parsers and execute them...
+    NP1 = NewsParser_CNN.NewsParser_CNN()
+    NP1.execute()
 
-#Init all the news parsers and execute them...
-NP1 = NewsParser_CNN.NewsParser_CNN()
-NP1.execute()
+    NP2 = NewsParser_NYT.NewsParser_NYT()
+    NP2.execute()
 
-NP2 = NewsParser_NYT.NewsParser_NYT()
-NP2.execute()
+    NP3 = NewsParser_NBC.NewsParser_NBC()
+    NP3.execute()
 
-NP3 = NewsParser_NBC.NewsParser_NBC()
-NP3.execute()
+    NP4 = NewsParser_FOX.NewsParser_FOX()
+    NP4.execute()
 
-NP4 = NewsParser_FOX.NewsParser_FOX()
-NP4.execute()
-
+#execute()

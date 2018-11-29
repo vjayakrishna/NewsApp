@@ -146,23 +146,7 @@ class GUI:
         msgbox = tkinter.messagebox.askquestion("REFRESH", "Loading app data, it may take some time.\nDo you want to continue?", icon='warning')
 
         if msgbox == 'yes':
-            #Reset all the file data and article files before executing the program.
-            crawler.remove_existing_files()
-            crawler.clearallfiledata()
-            
-            #Init all the news parsers and execute them...
-            NP1 = NewsParser_CNN.NewsParser_CNN()
-            NP1.execute()
-
-            NP2 = NewsParser_NYT.NewsParser_NYT()
-            NP2.execute()
-
-            NP3 = NewsParser_NBC.NewsParser_NBC()
-            NP3.execute()
-
-            NP4 = NewsParser_FOX.NewsParser_FOX()
-            NP4.execute()
-
+            crawler.execute()
             tkinter.messagebox.showinfo("REFRESH", "Process completed.")
 
             #To start displaying new data from files.
