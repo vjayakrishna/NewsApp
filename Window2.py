@@ -1,15 +1,14 @@
-from tkinter import ttk
 import webbrowser
-from tkHyperlinkManager import *
+from tkinter import ttk
 from Window3 import Window3
+from tkHyperlinkManager import *
+
 
 #class to display data on main GUI window.
 class Window2:
     def __init__(self, root, data):
-        self.counter = 0    #counter for the control of data.
-        self.location = "./files/news_articles/" #path of directory to read story from files.
-        #lists to store data from files.
-        self.value = self.value1 = self.value2 = self.value3 = []
+        self.counter = 0    #counter for the control flow of data.
+        self.value = self.value1 = self.value2 = self.value3 = []   #lists to store data from files.
 
         #initialize root to main window.
         self.root2 = root
@@ -35,7 +34,7 @@ class Window2:
             text1.insert(END, "\nFor story, ")
 
             #link to open new GUI window.
-            text1.insert(END, "click here", hyperlink.add(lambda: self.story(self.location+self.value[1].strip()+"/"+self.value[3].strip())))
+            text1.insert(END, "click here", hyperlink.add(lambda: self.story(self.value)))
 
             #setting font to diaplay data.
             text1.tag_configure("arial", font="Arial 11")
@@ -67,7 +66,7 @@ class Window2:
             text2.insert(END, "\nFor story, ")
 
             #link to open new GUI window.
-            text2.insert(END, "click here", hyperlink.add(lambda: self.story(self.location+self.value1[1].strip()+"/"+self.value1[3].strip())))
+            text2.insert(END, "click here", hyperlink.add(lambda: self.story(self.value1)))
 
             #setting font to diaplay data.
             text2.tag_configure("arial", font="Arial 11")
@@ -99,7 +98,7 @@ class Window2:
             text3.insert(END, "\nFor story, ")
 
             #link to open new GUI window.
-            text3.insert(END, "click here", hyperlink.add(lambda: self.story(self.location+self.value2[1].strip()+"/"+self.value2[3].strip())))
+            text3.insert(END, "click here", hyperlink.add(lambda: self.story(self.value2)))
 
             #setting font to diaplay data.
             text3.tag_configure("arial", font="Arial 11")
@@ -131,7 +130,7 @@ class Window2:
             text4.insert(END, "\nFor story, ")
 
             #link to open new GUI window.
-            text4.insert(END, "click here", hyperlink.add(lambda: self.story(self.location+self.value3[1].strip()+"/"+self.value3[3].strip())))
+            text4.insert(END, "click here", hyperlink.add(lambda: self.story(self.value3)))
 
             #setting font to diaplay data.
             text4.tag_configure("arial", font="Arial 11")
@@ -149,10 +148,10 @@ class Window2:
             ttk.Separator(self.root2, orient=HORIZONTAL).place(x=0, y=535, relwidth=1)
 
         #adding buttons to main window to contol data movement.
-        button_prev = Button(self.root2, cursor="dot", bd=3, bg="grey70", font="Verdana 12 bold italic", text="Prev", relief=GROOVE, command=self.prev)
+        button_prev = Button(self.root2, bd=3, bg="grey70", font="Verdana 11 italic", text="Prev", relief=GROOVE, command=self.prev)
         button_prev.place(x=400, y=560)
 
-        button_next = Button(self.root2, cursor="dot", bd=3, bg="grey70", font="Verdana 12 bold italic", text="Next", relief=GROOVE, command=self.next)
+        button_next = Button(self.root2, bd=3, bg="grey70", font="Verdana 11 italic", text="Next", relief=GROOVE, command=self.next)
         button_next.place(x=465, y=560)
 
     def prev(self):
@@ -175,9 +174,9 @@ class Window2:
         #method to open url in web browser.
         webbrowser.open(url.strip())
 
-    def story(self, paragraph):
+    def story(self, news):
         #method to open news story in new window(GUI).
-        window = Window3(paragraph.strip())
+        window = Window3(news)
 
 
 if __name__ == "__main__":
